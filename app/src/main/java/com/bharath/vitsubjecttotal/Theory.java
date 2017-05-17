@@ -89,9 +89,6 @@ public class Theory extends AppCompatActivity {
         });
     }
 
-    public void setZero(EditText et) {
-        et.setText("0");
-    }
 
     public int process() {
         if ((cat1.getText().toString()).equals("")) {
@@ -119,6 +116,6 @@ public class Theory extends AppCompatActivity {
             da=Integer.parseInt(das.getText().toString());
         }
         
-        return (int) Math.ceil(((c1+c2)*0.3)+da+(f*0.4));
+        return (int) Math.floor(((c1+c2)*0.3)+da+(f*0.4));
     }
 }
