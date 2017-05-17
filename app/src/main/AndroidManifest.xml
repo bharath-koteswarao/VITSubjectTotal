@@ -16,6 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Theory" />
+        <activity android:name=".TandP" />
+        <activity android:name=".TandL" />
+        <activity android:name=".TandPandL"></activity>
     </application>
 
 </manifest>
