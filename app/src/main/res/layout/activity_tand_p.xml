@@ -96,7 +96,7 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/labMarks"
+                    android:id="@+id/projectMarks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="PROJECT MARKS"
@@ -111,6 +111,7 @@
                 android:layout_marginTop="20dp"
                 android:background="@color/primary"
                 android:gravity="center"
+                android:id="@+id/result"
                 android:padding="10dp"
                 android:text="TOTAL COMES HERE"
                 android:textAlignment="center"
