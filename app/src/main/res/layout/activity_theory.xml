@@ -6,80 +6,96 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:padding="60dp"
+    android:padding="40dp"
     tools:context="com.bharath.vitsubjecttotal.Theory">
-    <LinearLayout
+
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg"
-        android:paddingBottom="25dp"
-        android:paddingRight="25dp"
-        android:paddingTop="10dp"
-        android:paddingLeft="25dp"
-        android:orientation="vertical">
-        <android.support.design.widget.TextInputLayout
+        android:background="@drawable/bg">
+
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+            android:orientation="vertical"
+            android:paddingBottom="25dp"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            android:paddingTop="10dp">
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="CAT - 1"
-                android:inputType="number"
-                android:padding="10dp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_marginTop="10dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/cat1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CAT - 1"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="CAT - 2"
-                android:inputType="number"
-                android:padding="10dp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_marginTop="10dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/cat2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="CAT - 2"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="FAT"
-                android:inputType="number"
-                android:padding="10dp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_marginTop="10dp">
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
+                <EditText
+                    android:id="@+id/fat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="FAT"
+                    android:maxLength="3"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
 
-            <EditText
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="DA1 + DA2 + DA3"
-                android:inputType="number"
-                android:padding="10dp" />
-        </android.support.design.widget.TextInputLayout>
+                android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
-            android:textAlignment="center"
-            android:background="@color/primary"
-            android:gravity="center"
-            android:padding="10dp"
-            android:text="TOTAL COMES HERE"
-            android:textColor="@android:color/primary_text_dark"
-            android:textStyle="bold" />
-    </LinearLayout>
+                <EditText
+                    android:id="@+id/daTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="DA1 + DA2 + DA3"
+                    android:maxLength="2"
+                    android:inputType="number"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/total"
+                android:layout_marginTop="20dp"
+                android:background="@color/primary"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="TOTAL COMES HERE"
+                android:textAlignment="center"
+                android:textColor="@android:color/primary_text_dark"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
