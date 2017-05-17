@@ -29,6 +29,7 @@
                     android:id="@+id/cat1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="2"
                     android:hint="CAT - 1"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -43,6 +44,7 @@
                     android:id="@+id/cat2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="2"
                     android:hint="CAT - 2"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -59,6 +61,7 @@
                     android:layout_height="wrap_content"
                     android:hint="FAT"
                     android:inputType="number"
+                    android:maxLength="3"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -72,6 +75,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="DA1 + DA2 + DA3"
+                    android:maxLength="2"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
@@ -86,6 +90,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="THEORY CREDITS"
+                    android:maxLength="1"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
@@ -100,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="LAB TOTAL"
+                    android:maxLength="3"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
@@ -114,6 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="PROJECT MARKS"
+                    android:maxLength="3"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
@@ -121,6 +128,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:id="@+id/result"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@color/primary"

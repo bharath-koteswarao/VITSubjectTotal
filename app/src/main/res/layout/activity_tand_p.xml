@@ -30,6 +30,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CAT - 1"
+                    android:maxLength="1"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
@@ -43,6 +44,7 @@
                     android:id="@+id/cat2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="2"
                     android:hint="CAT - 2"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -57,6 +59,7 @@
                     android:id="@+id/fat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="3"
                     android:hint="FAT"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -71,6 +74,7 @@
                     android:id="@+id/daTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="2"
                     android:hint="DA1 + DA2 + DA3"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -85,6 +89,7 @@
                     android:id="@+id/credits"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:maxLength="1"
                     android:hint="THEORY CREDITS"
                     android:inputType="number"
                     android:padding="10dp" />
@@ -100,6 +105,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="PROJECT MARKS"
+                    android:maxLength="3"
                     android:inputType="number"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
