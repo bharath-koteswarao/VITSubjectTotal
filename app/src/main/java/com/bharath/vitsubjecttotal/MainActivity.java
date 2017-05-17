@@ -1,5 +1,6 @@
 package com.bharath.vitsubjecttotal;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,14 +14,18 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void theory(View view) {
+        startActivity(new Intent(this,Theory.class));
     }
 
     public void theoryAndLab(View view) {
+        startActivity(new Intent(this,TandL.class));
     }
 
     public void theoryAndProject(View view) {
+        startActivity(new Intent(this,TandP.class));
     }
 
     public void theoryAndLabAndProject(View view) {
+        startActivity(new Intent(this,TandPandL.class));
     }
 }
