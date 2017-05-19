@@ -3,127 +3,132 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="40dp"
+    android:orientation="vertical"
     tools:context="com.bharath.vitsubjecttotal.TandL">
 
-    <ScrollView
+    <TextView
+        android:id="@+id/tplresult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg">
+        android:layout_gravity="center"
+        android:background="@color/primary"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="THEORY AND LAB"
+        android:textAlignment="center"
+        android:textColor="@android:color/primary_text_dark"
+        android:textStyle="bold" />
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="40dp">
+
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="25dp"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            android:paddingTop="10dp">
+            android:background="@drawable/bg">
 
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical"
+                android:paddingBottom="25dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp">
 
-                <EditText
-                    android:id="@+id/tplcredits"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="TOTAL CREDITS"
-                    android:inputType="number"
-                    android:maxLength="1"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplcredits"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="TOTAL CREDITS"
+                        android:inputType="number"
+                        android:maxLength="1"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/tplcat1"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CAT - 1"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplcat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CAT - 1"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/tplcat2"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CAT - 2"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplcat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CAT - 2"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/tplfat"
+
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="FAT"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tpldaTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="DA1 + DA2 + DA3"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/tpldaTotal"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="DA1 + DA2 + DA3"
-                    android:inputType="number"
-                    android:maxLength="2"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplfat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="FAT"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/tpllabMarks"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="LAB TOTAL"
-                    android:inputType="number"
-                    android:maxLength="3"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-
-            <TextView
-                android:id="@+id/tplresult"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@color/primary"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="TOTAL COMES HERE"
-                android:textAlignment="center"
-                android:textColor="@android:color/primary_text_dark"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </ScrollView>
+                    <EditText
+                        android:id="@+id/tpllabMarks"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="LAB MARKS"
+                        android:inputType="number"
+                        android:maxLength="3"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>
