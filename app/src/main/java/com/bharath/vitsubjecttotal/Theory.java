@@ -6,7 +6,6 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Theory extends AppCompatActivity {
     EditText cat1, cat2, fat, das;
@@ -18,10 +17,10 @@ public class Theory extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theory);
-        cat1 = (EditText) findViewById(R.id.cat1);
-        cat2 = (EditText) findViewById(R.id.cat2);
-        fat = (EditText) findViewById(R.id.fat);
-        das = (EditText) findViewById(R.id.daTotal);
+        cat1 = (EditText) findViewById(R.id.tplcat1);
+        cat2 = (EditText) findViewById(R.id.tplcat2);
+        fat = (EditText) findViewById(R.id.tplfat);
+        das = (EditText) findViewById(R.id.tpldaTotal);
         total = (TextView) findViewById(R.id.total);
         cat1.addTextChangedListener(new TextWatcher() {
             @Override

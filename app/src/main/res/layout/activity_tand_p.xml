@@ -26,12 +26,27 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/cat1"
+                    android:id="@+id/tplcredits"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="TOTAL CREDITS"
+                    android:inputType="number"
+                    android:maxLength="1"
+                    android:padding="10dp" />
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp">
+
+                <EditText
+                    android:id="@+id/tplcat1"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="CAT - 1"
-                    android:maxLength="1"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -41,12 +56,12 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/cat2"
+                    android:id="@+id/tplcat2"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="2"
                     android:hint="CAT - 2"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -56,12 +71,12 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/fat"
+                    android:id="@+id/tplfat"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="3"
                     android:hint="FAT"
                     android:inputType="number"
+                    android:maxLength="3"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
 
@@ -71,14 +86,15 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/daTotal"
+                    android:id="@+id/tpldaTotal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:maxLength="2"
                     android:hint="DA1 + DA2 + DA3"
                     android:inputType="number"
+                    android:maxLength="2"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
+
 
             <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
@@ -86,38 +102,23 @@
                 android:layout_marginTop="10dp">
 
                 <EditText
-                    android:id="@+id/credits"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLength="1"
-                    android:hint="THEORY CREDITS"
-                    android:inputType="number"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
-
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
-
-                <EditText
-                    android:id="@+id/projectMarks"
+                    android:id="@+id/tplprojectMarks"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="PROJECT MARKS"
-                    android:maxLength="3"
                     android:inputType="number"
+                    android:maxLength="3"
                     android:padding="10dp" />
             </android.support.design.widget.TextInputLayout>
 
             <TextView
+                android:id="@+id/tplresult"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@color/primary"
                 android:gravity="center"
-                android:id="@+id/result"
                 android:padding="10dp"
                 android:text="TOTAL COMES HERE"
                 android:textAlignment="center"

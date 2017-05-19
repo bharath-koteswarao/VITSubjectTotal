@@ -4,98 +4,98 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="40dp"
     tools:context="com.bharath.vitsubjecttotal.Theory">
-
-    <ScrollView
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg">
-
-        <LinearLayout
+        android:id="@+id/total"
+        android:background="@color/primary"
+        android:padding="20dp"
+        android:text="TOTAL COMES HERE"
+        android:textAlignment="center"
+        android:textColor="@android:color/primary_text_dark"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:padding="40dp">
+        <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingBottom="25dp"
-            android:paddingLeft="25dp"
-            android:paddingRight="25dp"
-            android:paddingTop="10dp">
+            android:background="@drawable/bg">
 
-            <android.support.design.widget.TextInputLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical"
+                android:paddingBottom="25dp"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:paddingTop="10dp">
 
-                <EditText
-                    android:id="@+id/cat1"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CAT - 1"
-                    android:maxLength="2"
-                    android:inputType="number"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplcat1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CAT - 1"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/cat2"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="CAT - 2"
-                    android:maxLength="2"
-                    android:inputType="number"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplcat2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="CAT - 2"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/fat"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="FAT"
-                    android:maxLength="3"
-                    android:inputType="number"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <android.support.design.widget.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                    <EditText
+                        android:id="@+id/tplfat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="FAT"
+                        android:maxLength="3"
+                        android:inputType="number"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/daTotal"
+                <android.support.design.widget.TextInputLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="DA1 + DA2 + DA3"
-                    android:maxLength="2"
-                    android:inputType="number"
-                    android:padding="10dp" />
-            </android.support.design.widget.TextInputLayout>
+                    android:layout_marginTop="10dp">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:id="@+id/total"
-                android:layout_marginTop="20dp"
-                android:background="@color/primary"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="TOTAL COMES HERE"
-                android:textAlignment="center"
-                android:textColor="@android:color/primary_text_dark"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </ScrollView>
+                    <EditText
+                        android:id="@+id/tpldaTotal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="DA1 + DA2 + DA3"
+                        android:maxLength="2"
+                        android:inputType="number"
+                        android:padding="10dp" />
+                </android.support.design.widget.TextInputLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
 </LinearLayout>

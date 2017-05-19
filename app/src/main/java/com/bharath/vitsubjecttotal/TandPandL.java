@@ -16,14 +16,14 @@ public class TandPandL extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tand_pand_l);
-        cat1=(EditText)findViewById(R.id.cat1);
-        cat2=(EditText)findViewById(R.id.cat2);
-        fat=(EditText)findViewById(R.id.fat);
-        das=(EditText)findViewById(R.id.daTotal);
-        theoryCredits=(EditText)findViewById(R.id.credits);
-        projectMarks=(EditText)findViewById(R.id.projectMarks);
-        labMarks=(EditText)findViewById(R.id.labMarks);
-        result=(TextView)findViewById(R.id.result);
+        cat1=(EditText)findViewById(R.id.tplcat1);
+        cat2=(EditText)findViewById(R.id.tplcat2);
+        fat=(EditText)findViewById(R.id.tplfat);
+        das=(EditText)findViewById(R.id.tpldaTotal);
+        theoryCredits=(EditText)findViewById(R.id.tplcredits);
+        projectMarks=(EditText)findViewById(R.id.tplprojectMarks);
+        labMarks=(EditText)findViewById(R.id.tpllabMarks);
+        result=(TextView)findViewById(R.id.tplresult);
         cat1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -181,6 +181,6 @@ public class TandPandL extends AppCompatActivity {
             lab=Integer.parseInt(labMarks.getText().toString());
         }
 
-        return (int) Math.floor((tcredits*(((c1+c2)*0.3)+da+0.4*f)+project+lab)/(tcredits+2));
+        return (int) Math.ceil(((tcredits-2)*(((c1+c2)*0.3)+da+0.4*f)+project+lab)/(tcredits));
     }
 }

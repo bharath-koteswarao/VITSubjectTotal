@@ -8,20 +8,20 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 public class TandL extends AppCompatActivity {
-    EditText cat1,cat2,fat,das,theoryCredits,labTotal;
+    EditText cat1,cat2,fat,das, totalCredits,labTotal;
     TextView result;
     int c1,c2,f,da,tcredits,lab;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tand_l);
-        cat1=(EditText)findViewById(R.id.cat1);
-        cat2=(EditText)findViewById(R.id.cat2);
-        fat=(EditText)findViewById(R.id.fat);
-        das=(EditText)findViewById(R.id.daTotal);
-        theoryCredits=(EditText)findViewById(R.id.credits);
-        labTotal=(EditText)findViewById(R.id.labMarks);
-        result=(TextView)findViewById(R.id.result);
+        cat1=(EditText)findViewById(R.id.tplcat1);
+        cat2=(EditText)findViewById(R.id.tplcat2);
+        fat=(EditText)findViewById(R.id.tplfat);
+        das=(EditText)findViewById(R.id.tpldaTotal);
+        totalCredits =(EditText)findViewById(R.id.tplcredits);
+        labTotal=(EditText)findViewById(R.id.tpllabMarks);
+        result=(TextView)findViewById(R.id.tplresult);
         cat1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -86,7 +86,7 @@ public class TandL extends AppCompatActivity {
 
             }
         });
-        theoryCredits.addTextChangedListener(new TextWatcher() {
+        totalCredits.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
@@ -144,11 +144,11 @@ public class TandL extends AppCompatActivity {
         else {
             da=Integer.parseInt(das.getText().toString());
         }
-        if ((theoryCredits.getText().toString()).equals("")) {
+        if ((totalCredits.getText().toString()).equals("")) {
             tcredits = 0;
         }
         else {
-            tcredits=Integer.parseInt(theoryCredits.getText().toString());
+            tcredits=Integer.parseInt(totalCredits.getText().toString());
         }
         if ((labTotal.getText().toString()).equals("")) {
             lab = 0;
@@ -157,6 +157,6 @@ public class TandL extends AppCompatActivity {
             lab=Integer.parseInt(labTotal.getText().toString());
         }
 
-        return (int) Math.floor((tcredits*(((c1+c2)*0.3)+da+0.4*f)+lab)/(tcredits+1));
+        return (int) Math.ceil(((tcredits-1)*(((c1+c2)*0.3)+da+0.4*f)+lab)/(tcredits));
     }
 }
