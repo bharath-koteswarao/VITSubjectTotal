@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">VIT Total Finder</string>
+	<string name="trans_name">button_to_cardview</string>
 </resources>

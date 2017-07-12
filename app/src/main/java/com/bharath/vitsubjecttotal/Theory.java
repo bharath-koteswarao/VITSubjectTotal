@@ -11,12 +11,12 @@ public class Theory extends AppCompatActivity {
     EditText cat1, cat2, fat, das;
     TextView total;
     int c1, c2, f, da;
-    double answer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theory);
+
         cat1 = (EditText) findViewById(R.id.tplcat1);
         cat2 = (EditText) findViewById(R.id.tplcat2);
         fat = (EditText) findViewById(R.id.tplfat);

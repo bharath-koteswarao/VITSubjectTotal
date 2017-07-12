@@ -7,12 +7,15 @@
 	android:layout_height="wrap_content"
 	android:layout_gravity="center"
 	android:layout_margin="30dp"
+	android:background="@drawable/gradiant"
 	android:gravity="center"
 	app:cardElevation="5dp"
+	app:cardCornerRadius="5dp"
 	tools:context="com.bharath.vitsubjecttotal.MainActivity">
 	<LinearLayout
 		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
+		android:layout_height="match_parent"
+		android:background="@android:color/transparent"
 		android:orientation="vertical">
 		<LinearLayout
 			android:layout_width="match_parent"
@@ -21,10 +24,13 @@
 			android:orientation="horizontal">
 			<Button
 				android:layout_width="0dp"
-				android:background="@drawable/gradiant"
+				android:background="@drawable/radius1"
 				android:layout_height="match_parent"
-				android:layout_margin="1dp"
+				android:layout_margin="0dp"
+				android:onClick="theory"
+				android:id="@+id/btn1"
 				android:text="Theory"
+				android:lineSpacingExtra="5dp"
 				android:paddingTop="70dp"
 				android:paddingBottom="70dp"
 				android:gravity="center"
@@ -34,13 +40,16 @@
 			<Button
 				android:layout_width="0dp"
 				android:layout_height="match_parent"
-				android:layout_margin="1dp"
+				android:lineSpacingExtra="5dp"
+				android:layout_margin="0dp"
+				android:onClick="theoryAndLab"
 				android:paddingTop="70dp"
+				android:text="Theory\n Lab"
+				android:id="@+id/btn2"
 				android:paddingBottom="70dp"
-				android:text="Theory"
 				android:textStyle="bold"
 				android:textColor="@android:color/white"
-				android:background="@drawable/gradiant"
+				android:background="@drawable/radius2"
 				android:layout_weight="0.5"/>
 		</LinearLayout>
 		<LinearLayout
@@ -50,25 +59,32 @@
 			android:orientation="horizontal">
 			<Button
 				android:layout_width="0dp"
-				android:layout_margin="1dp"
+				android:layout_margin="0dp"
 				android:paddingTop="70dp"
+				android:lineSpacingExtra="5dp"
+				
+				android:text="Theory\n Project"
+				android:onClick="theoryAndProject"
 				android:paddingBottom="70dp"
-				android:text="Theory"
+				android:id="@+id/btn3"
 				android:textStyle="bold"
 				android:textColor="@android:color/white"
 				android:layout_height="match_parent"
-				android:background="@drawable/gradiant"
+				android:background="@drawable/radius3"
 				android:layout_weight="0.5"/>
 			<Button
 				android:layout_width="0dp"
-				android:layout_margin="1dp"
+				android:lineSpacingExtra="5dp"
+				android:layout_margin="0dp"
 				android:paddingTop="70dp"
-				android:paddingBottom="70dp"
-				android:text="Theory"
+				android:onClick="theoryAndLabAndProject"
+				android:id="@+id/btn4"
+				android:paddingBottom="50dp"
+				android:text="Theory\n Lab\n Project"
 				android:textStyle="bold"
 				android:textColor="@android:color/white"
 				android:layout_height="match_parent"
-				android:background="@drawable/gradiant"
+				android:background="@drawable/radius4"
 				android:layout_weight="0.5"/>
 		</LinearLayout>
 	</LinearLayout>
@@ -83,7 +99,7 @@
 	<!--android:background="#7ed3d3d3"-->
 	<!--android:gravity="center"-->
 	<!--android:orientation="vertical"-->
-	<!--android:padding="10dp"-->
+	<!--android:padding="5dp"-->
 	<!--tools:context="com.bharath.vitsubjecttotal.MainActivity">-->
 	
 	<!--<Button-->
