@@ -10,7 +10,7 @@
 	android:background="@drawable/gradiant"
 	android:gravity="center"
 	app:cardElevation="5dp"
-	app:cardCornerRadius="5dp"
+	app:cardCornerRadius="10dp"
 	tools:context="com.bharath.vitsubjecttotal.MainActivity">
 	<LinearLayout
 		android:layout_width="match_parent"
@@ -89,63 +89,3 @@
 		</LinearLayout>
 	</LinearLayout>
 </android.support.v7.widget.CardView>
-	<!--<?xml version="1.0" encoding="utf-8"?>-->
-	<!--<LinearLayout-->
-	<!--xmlns:android="http://schemas.android.com/apk/res/android"-->
-	<!--xmlns:tools="http://schemas.android.com/tools"-->
-	<!--android:layout_width="match_parent"-->
-	<!--android:layout_height="match_parent"-->
-	<!--android:layout_gravity="center"-->
-	<!--android:background="#7ed3d3d3"-->
-	<!--android:gravity="center"-->
-	<!--android:orientation="vertical"-->
-	<!--android:padding="5dp"-->
-	<!--tools:context="com.bharath.vitsubjecttotal.MainActivity">-->
-	
-	<!--<Button-->
-	<!--android:id="@+id/btn1"-->
-	<!--android:layout_width="wrap_content"-->
-	<!--android:layout_height="wrap_content"-->
-	<!--android:background="@color/primary"-->
-	<!--android:onClick="theory"-->
-	<!--android:padding="15dp"-->
-	<!--android:text="ONLY THEORY"-->
-	<!--android:textColor="@android:color/white"-->
-	<!--android:textStyle="bold"/>-->
-	
-	<!--<Button-->
-	<!--android:id="@+id/btn2"-->
-	<!--android:layout_width="wrap_content"-->
-	<!--android:layout_height="wrap_content"-->
-	<!--android:layout_marginTop="20dp"-->
-	<!--android:background="@color/primary"-->
-	<!--android:onClick="theoryAndLab"-->
-	<!--android:padding="15dp"-->
-	<!--android:text="THEORY AND LAB"-->
-	<!--android:textColor="@android:color/white"-->
-	<!--android:textStyle="bold"/>-->
-	
-	<!--<Button-->
-	<!--android:id="@+id/btn3"-->
-	<!--android:layout_width="wrap_content"-->
-	<!--android:layout_height="wrap_content"-->
-	<!--android:layout_marginTop="20dp"-->
-	<!--android:background="@color/primary"-->
-	<!--android:onClick="theoryAndProject"-->
-	<!--android:padding="15dp"-->
-	<!--android:text="THEORY AND PROJECT"-->
-	<!--android:textColor="@android:color/white"-->
-	<!--android:textStyle="bold"/>-->
-	
-	<!--<Button-->
-	<!--android:id="@+id/btn4"-->
-	<!--android:layout_width="wrap_content"-->
-	<!--android:layout_height="wrap_content"-->
-	<!--android:layout_marginTop="20dp"-->
-	<!--android:background="@color/primary"-->
-	<!--android:onClick="theoryAndLabAndProject"-->
-	<!--android:padding="15dp"-->
-	<!--android:text="THEORY AND LAB AND PROJECT"-->
-	<!--android:textColor="@android:color/white"-->
-	<!--android:textStyle="bold"/>-->
-	<!--</LinearLayout>-->

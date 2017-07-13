@@ -1,145 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              xmlns:tools="http://schemas.android.com/tools"
-              android:layout_width="match_parent"
-              android:layout_height="match_parent"
-              xmlns:app="http://schemas.android.com/apk/res-auto"
-              android:orientation="vertical"
-              tools:context="com.bharath.vitsubjecttotal.TandPandL">
-    <TextView
-        android:id="@+id/tplresult"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:background="@color/primary"
-        android:gravity="center"
-        android:padding="20dp"
-        android:text="THEORY PROJECT AND LAB"
-        android:textAlignment="center"
-        android:textColor="@android:color/primary_text_dark"
-        android:textStyle="bold" />
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <android.support.v7.widget.CardView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_margin="50dp"
-            android:transitionName="@string/trans_name"
-            app:cardElevation="8dp">
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:paddingBottom="25dp"
-                android:paddingLeft="25dp"
-                android:paddingRight="25dp"
-                android:paddingTop="10dp">
-            
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tplcredits"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="TOTAL CREDITS"
-                        android:inputType="number"
-                        android:maxLength="1"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-            
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tplcat1"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="CAT - 1"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-            
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tplcat2"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="CAT - 2"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tpldaTotal"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="DA1 + DA2 + DA3"
-                        android:inputType="number"
-                        android:maxLength="2"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tplfat"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="FAT"
-                        android:inputType="number"
-                        android:maxLength="3"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tpllabMarks"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:hint="LAB TOTAL"
-                        android:inputType="number"
-                        android:maxLength="3"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-            
-                <android.support.design.widget.TextInputLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp">
-                
-                    <EditText
-                        android:id="@+id/tplprojectMarks"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:hint="PROJECT MARKS"
-                        android:inputType="number"
-                        android:maxLength="3"
-                        android:padding="10dp" />
-                </android.support.design.widget.TextInputLayout>
-            </LinearLayout>
-        </android.support.v7.widget.CardView>
-    </RelativeLayout>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="com.bharath.vitsubjecttotal.TandPandL">
+	
+	<TextView
+		android:id="@+id/tplresult"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center"
+		android:background="@color/primary"
+		android:gravity="center"
+		android:padding="20dp"
+		android:text="THEORY PROJECT AND LAB"
+		android:textAlignment="center"
+		android:textColor="@android:color/primary_text_dark"
+		android:textStyle="bold"/>
+	
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent">
+			
+			<android.support.v7.widget.CardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_gravity="center"
+				android:layout_margin="50dp"
+				android:transitionName="@string/trans_name"
+				app:cardElevation="8dp">
+				
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:orientation="vertical"
+					android:paddingBottom="25dp"
+					android:paddingLeft="25dp"
+					android:paddingRight="25dp"
+					android:paddingTop="10dp">
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tplcredits"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="TOTAL CREDITS"
+							android:inputType="number"
+							android:maxLength="1"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tplcat1"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="CAT - 1"
+							android:inputType="number"
+							android:maxLength="2"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tplcat2"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="CAT - 2"
+							android:inputType="number"
+							android:maxLength="2"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tpldaTotal"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="DA1 + DA2 + DA3"
+							android:inputType="number"
+							android:maxLength="2"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tplfat"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="FAT"
+							android:inputType="number"
+							android:maxLength="3"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tpllabMarks"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:layout_weight="1"
+							android:hint="LAB TOTAL"
+							android:inputType="number"
+							android:maxLength="3"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+					
+					<android.support.design.widget.TextInputLayout
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginTop="10dp">
+						
+						<EditText
+							android:id="@+id/tplprojectMarks"
+							android:layout_width="match_parent"
+							android:layout_height="wrap_content"
+							android:hint="PROJECT MARKS"
+							android:inputType="number"
+							android:maxLength="3"
+							android:padding="10dp"/>
+					</android.support.design.widget.TextInputLayout>
+				</LinearLayout>
+			</android.support.v7.widget.CardView>
+		</RelativeLayout>
+	</ScrollView>
 </LinearLayout>
