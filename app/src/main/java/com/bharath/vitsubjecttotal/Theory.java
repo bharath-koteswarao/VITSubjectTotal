@@ -6,17 +6,18 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
+import com.bharath.vitsubjecttotal.Calculators.SubjectTotal;
 
 public class Theory extends AppCompatActivity {
     EditText cat1, cat2, fat, das;
     TextView total;
-    int c1, c2, f, da;
+    SubjectTotal subjectTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_theory);
-
+        subjectTotal = new SubjectTotal();
         cat1 = (EditText) findViewById(R.id.tplcat1);
         cat2 = (EditText) findViewById(R.id.tplcat2);
         fat = (EditText) findViewById(R.id.tplfat);
@@ -30,7 +31,7 @@ public class Theory extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                total.setText(process()+"");
+                total.setText(update() + "");
             }
 
             @Override
@@ -46,7 +47,7 @@ public class Theory extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                total.setText(process()+"");
+                total.setText(update() + "");
             }
 
             @Override
@@ -62,7 +63,7 @@ public class Theory extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                total.setText(process()+"");
+                total.setText(update() + "");
             }
 
             @Override
@@ -78,7 +79,7 @@ public class Theory extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                total.setText(process()+"");
+                total.setText(update() + "");
             }
 
             @Override
@@ -89,32 +90,7 @@ public class Theory extends AppCompatActivity {
     }
 
 
-    public int process() {
-        if ((cat1.getText().toString()).equals("")) {
-            c1 = 0;
-        }
-        else {
-            c1=Integer.parseInt(cat1.getText().toString());
-        }
-        if ((cat2.getText().toString()).equals("")) {
-            c2 = 0;
-        }
-        else {
-            c2=Integer.parseInt(cat2.getText().toString());
-        }
-        if ((fat.getText().toString()).equals("")) {
-            f = 0;
-        }
-        else {
-            f=Integer.parseInt(fat.getText().toString());
-        }
-        if ((das.getText().toString()).equals("")) {
-            da = 0;
-        }
-        else {
-            da=Integer.parseInt(das.getText().toString());
-        }
-        
-        return (int) Math.floor(((c1+c2)*0.3)+da+(f*0.4));
+    public int update() {
+        return subjectTotal.calculateT(cat1, cat2, fat, das);
     }
 }
