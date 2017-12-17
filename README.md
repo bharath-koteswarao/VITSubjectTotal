@@ -6,4 +6,5 @@
 <li>Theory and lab</li>
 <li>Theory and project</li>
 <li>Theory and lab and project</li>
-<ul>
+</ul>
+<a href="https://play.google.com/store/apps/details?id=com.bharath.vitsubjecttotal" style="border:solid #d3d3d3 1px;">Get on Google Play!!</a>
