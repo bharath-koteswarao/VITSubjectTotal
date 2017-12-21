@@ -9,10 +9,10 @@
 		android:roundIcon="@mipmap/ic_launcher"
 		android:supportsRtl="true"
 		android:theme="@style/AppTheme">
-		<activity android:name=".Theory"/>
-		<activity android:name=".TandP"/>
-		<activity android:name=".TandL"/>
-		<activity android:name=".TandPandL"/>
+		<activity android:name=".SubTotal.Theory"/>
+		<activity android:name=".SubTotal.TandP"/>
+		<activity android:name=".SubTotal.TandL"/>
+		<activity android:name=".SubTotal.TandPandL"/>
 		<activity
 			android:name=".MainActivity"
 			android:label="@string/title_activity_main"
@@ -22,6 +22,12 @@
 				
 				<category android:name="android.intent.category.LAUNCHER"/>
 			</intent-filter>
+		</activity>
+		<activity android:name=".Grades.GpaCalculator">
+		</activity>
+		<activity android:name=".Grades.CgpaCalculator">
+		</activity>
+		<activity android:name=".Grades.ArrearGradeCalculator">
 		</activity>
 	</application>
 

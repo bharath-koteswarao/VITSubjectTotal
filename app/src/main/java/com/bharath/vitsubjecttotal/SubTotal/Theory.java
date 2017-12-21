@@ -1,4 +1,4 @@
-package com.bharath.vitsubjecttotal;
+package com.bharath.vitsubjecttotal.SubTotal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,25 +7,23 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.bharath.vitsubjecttotal.Calculators.SubjectTotal;
+import com.bharath.vitsubjecttotal.R;
 
-public class TandL extends AppCompatActivity {
-    EditText cat1, cat2, fat, das, totalCredits, labTotal;
-    TextView result;
-
+public class Theory extends AppCompatActivity {
+    EditText cat1, cat2, fat, das;
+    TextView total;
     SubjectTotal subjectTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_tand_l);
+        setContentView(R.layout.activity_theory);
         subjectTotal = new SubjectTotal();
         cat1 = (EditText) findViewById(R.id.tplcat1);
         cat2 = (EditText) findViewById(R.id.tplcat2);
         fat = (EditText) findViewById(R.id.tplfat);
         das = (EditText) findViewById(R.id.tpldaTotal);
-        totalCredits = (EditText) findViewById(R.id.tplcredits);
-        labTotal = (EditText) findViewById(R.id.tpllabMarks);
-        result = (TextView) findViewById(R.id.tplresult);
+        total = (TextView) findViewById(R.id.total);
         cat1.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
@@ -34,7 +32,7 @@ public class TandL extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
+                total.setText(update() + "");
             }
 
             @Override
@@ -50,7 +48,7 @@ public class TandL extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
+                total.setText(update() + "");
             }
 
             @Override
@@ -66,7 +64,7 @@ public class TandL extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
+                total.setText(update() + "");
             }
 
             @Override
@@ -82,39 +80,7 @@ public class TandL extends AppCompatActivity {
 
             @Override
             public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        totalCredits.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
-            }
-
-            @Override
-            public void afterTextChanged(Editable editable) {
-
-            }
-        });
-        labTotal.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-            }
-
-            @Override
-            public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                result.setText(update() + "");
+                total.setText(update() + "");
             }
 
             @Override
@@ -124,7 +90,8 @@ public class TandL extends AppCompatActivity {
         });
     }
 
+
     public int update() {
-        return subjectTotal.calculateTL(cat1, cat2, fat, das, totalCredits, labTotal);
+        return subjectTotal.calculateT(cat1, cat2, fat, das);
     }
 }

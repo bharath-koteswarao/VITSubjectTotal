@@ -1,4 +1,4 @@
-package com.bharath.vitsubjecttotal;
+package com.bharath.vitsubjecttotal.SubTotal;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -7,6 +7,7 @@ import android.text.TextWatcher;
 import android.widget.EditText;
 import android.widget.TextView;
 import com.bharath.vitsubjecttotal.Calculators.SubjectTotal;
+import com.bharath.vitsubjecttotal.R;
 
 public class TandP extends AppCompatActivity {
     EditText cat1, cat2, fat, das, theoryCredits, projectMarks;

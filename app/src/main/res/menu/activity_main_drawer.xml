@@ -6,13 +6,13 @@
 	<group android:checkableBehavior="single">
 		<item
 			android:id="@+id/nav_camera"
-			android:title="GPA CALCULATOR"/>
+			android:title="Gpa Calculator"/>
 		<item
 			android:id="@+id/nav_gallery"
-			android:title="CGPA CALCULATOR"/>
+			android:title="Cgpa Calculator"/>
 		<item
 			android:id="@+id/nav_arrear_grade_calculator"
-			android:title="ARREAR GRADE CALCULATOR"/>
+			android:title="Arrear Grade Calculator"/>
 	</group>
 
 </menu>

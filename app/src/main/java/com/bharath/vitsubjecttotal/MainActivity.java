@@ -1,7 +1,6 @@
 package com.bharath.vitsubjecttotal;
 
 import android.content.Intent;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -18,13 +17,31 @@ import android.text.SpannableString;
 import android.text.Spanned;
 import android.text.style.TypefaceSpan;
 import android.transition.TransitionInflater;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+import android.widget.Toast;
+import com.bharath.vitsubjecttotal.Grades.ArrearGradeCalculator;
+import com.bharath.vitsubjecttotal.Grades.CgpaCalculator;
+import com.bharath.vitsubjecttotal.Grades.GpaCalculator;
+import com.bharath.vitsubjecttotal.SubTotal.TandL;
+import com.bharath.vitsubjecttotal.SubTotal.TandP;
+import com.bharath.vitsubjecttotal.SubTotal.TandPandL;
+import com.bharath.vitsubjecttotal.SubTotal.Theory;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     Toolbar toolbar;
+    ListView navListView;
+    DrawerLayout drawer;
+    ActionBarDrawerToggle toggle;
+    NavigationView navigationView;
+    int exitCount = 1;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,33 +49,67 @@ public class MainActivity extends AppCompatActivity
             getWindow().setSharedElementExitTransition(TransitionInflater.from(this).inflateTransition(R.transition.main_transition));
         }
         setContentView(R.layout.activity_main);
+        initialize();
+        setUpListView();
+    }
+
+    private void initialize() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setUpToolbar();
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
-
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
+        navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+        navListView = (ListView) navigationView.findViewById(R.id.navListView);
+    }
+
+    private void setUpListView() {
+        String[] items = new String[]{"Gpa Calculator", "Cgpa Calculator", "Arrear Grade Calculator"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, items);
+        navListView.setAdapter(adapter);
+        navListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                switch (i) {
+                    case 0: {
+                        startActivity(new Intent(MainActivity.this, GpaCalculator.class));
+                        drawer.closeDrawer(Gravity.START);
+                        break;
+                    }
+                    case 1: {
+                        startActivity(new Intent(MainActivity.this, CgpaCalculator.class));
+                        drawer.closeDrawer(Gravity.START);
+                        break;
+                    }
+                    default: {
+                        startActivity(new Intent(MainActivity.this, ArrearGradeCalculator.class));
+                        drawer.closeDrawer(Gravity.START);
+                        break;
+                    }
+                }
+            }
+        });
     }
 
     private void setUpToolbar() {
         setSupportActionBar(toolbar);
         SpannableString s = new SpannableString("SUBJECT TOTAL");
-        s.setSpan(new TypefaceSpan("slabo.ttf"),0,s.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
+        s.setSpan(new TypefaceSpan("slabo.ttf"), 0, s.length(), Spanned.SPAN_EXCLUSIVE_EXCLUSIVE);
         getSupportActionBar().setTitle(s);
     }
 
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
         } else {
-            super.onBackPressed();
+            if (exitCount == 1) {
+                Toast.makeText(this, "Press again to exit", Toast.LENGTH_SHORT).show();
+                exitCount += 1;
+            } else finishAffinity();
         }
     }
 
@@ -77,7 +128,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
+        if (id == R.id.rate_app) {
             final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
             try {
                 startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
@@ -93,17 +144,6 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Handle navigation view item clicks here.
-        int id = item.getItemId();
-
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
         return true;
     }
 
