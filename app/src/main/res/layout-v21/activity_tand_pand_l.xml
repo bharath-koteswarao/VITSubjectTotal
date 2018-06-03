@@ -5,17 +5,13 @@
 	xmlns:tools="http://schemas.android.com/tools"
 	android:layout_width="match_parent"
 	android:layout_height="match_parent"
-	android:descendantFocusability="beforeDescendants"
-	android:focusableInTouchMode="true"
 	android:orientation="vertical"
-	tools:context="com.bharath.vitsubjecttotal.SubTotal.TandPandL">
+	tools:context="com.bharath.vitsubjecttotal.TandPandL">
 	
 	<android.support.v7.widget.CardView
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
-		app:cardCornerRadius="0dp"
 		app:cardElevation="8dp">
-		
 		<TextView
 			android:id="@+id/tplresult"
 			android:layout_width="match_parent"
@@ -33,7 +29,6 @@
 	<ScrollView
 		android:layout_width="match_parent"
 		android:layout_height="match_parent">
-		
 		<RelativeLayout
 			android:layout_width="match_parent"
 			android:layout_height="match_parent">
@@ -109,9 +104,8 @@
 							android:id="@+id/tpldaTotal"
 							android:layout_width="match_parent"
 							android:layout_height="wrap_content"
-							android:hint="DA1 + DA2 + DA3"
-							android:inputType="number"
-							android:maxLength="2"
+							android:hint="DA's + Additional Learning"
+							android:inputType="numberDecimal"
 							android:padding="10dp"/>
 					</android.support.design.widget.TextInputLayout>
 					
